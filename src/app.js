@@ -7,10 +7,6 @@ const app = express();
 const server = http.Server(app);
 const io = require('socket.io')(server);
 
-io.on('connection', () => {
-  console.log('Connected')
-});
-
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
