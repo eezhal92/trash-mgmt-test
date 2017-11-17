@@ -13,7 +13,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const logs = ['Log 1', 'Log 2'];
+const logs = [{ temp: 10, hum: 20 }, { temp: 12, hum: 9 }];
 
 app.get('/', (req, res) => {
   const data = { logs };
@@ -26,7 +26,8 @@ app.get('/logs', (req, res) => {
 });
 
 app.post('/logs', (req, res) => {
-  const { log } = req.body;
+  const { temp1, hum1 } = req.body;
+  const log = { temp: temp1, hum: hum1 };
 
   logs.push(log);
 

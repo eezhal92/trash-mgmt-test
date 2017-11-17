@@ -9,7 +9,9 @@
   <div id="logs-container">
     <% logs.forEach(function (log) { %>
     <div class="log-item">
-      <%= log %>
+      <p>Temp: <%= log.temp %></p>
+      <p>Hum: <%= log.hum %></p>
+      <hr>
     </div>
     <% }) %>
   </div>

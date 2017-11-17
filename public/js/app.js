@@ -3,7 +3,11 @@ const socket = io();
 function createLogEl(data) {
   const el = document.createElement('div');
 
-  el.innerHTML = data;
+  el.innerHTML = `
+    <p>Temp: ${data.temp}</p>
+    <p>Hum: ${data.hum}</p>
+    <br>
+  `;
 
   return el;
 }
