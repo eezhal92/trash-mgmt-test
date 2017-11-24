@@ -14,10 +14,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const logs = [
-  { elevation: 10, createdAt: '2017-11-24 13:00:00' },
-  { elevation: 20, createdAt: '2017-11-24 14:00:00' },
-];
+const logs = [];
 
 app.get('/', (req, res) => {
   const data = { logs };
